@@ -1,7 +1,7 @@
 'use client'
 
 import { useDemoModal } from '@/components/ClientLayout'
-import { TradeInVisual } from '@/components/PlatformVisuals'
+import TradeInWorkflow from '@/components/TradeInWorkflow'
 
 export default function TradeIn() {
   const { openDemoModal } = useDemoModal()
@@ -80,8 +80,8 @@ export default function TradeIn() {
         </div>
       </section>
 
-      {/* Flow Diagram */}
-      <TradeInVisual />
+      {/* Trade-In Workflow */}
+      <TradeInWorkflow />
 
       {/* Content Section */}
       <section className="bg-white px-4 py-20">
