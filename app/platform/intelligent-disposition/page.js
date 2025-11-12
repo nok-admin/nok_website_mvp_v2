@@ -14,7 +14,6 @@ export default function IntelligentDisposition() {
         
         <div className="relative z-10 max-w-6xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-bold mb-8 text-gray-900 leading-[1.1] tracking-tight">
-            Intelligent Disposition Routing
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed font-light">
             AI-powered decision engine that routes every return to the highest-value outcome automatically.
