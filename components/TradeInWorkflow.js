@@ -2,9 +2,11 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-export default function TradeInWorkflow({ contentRefs = [] }) {
+export default function TradeInWorkflow({ contentRefs = [], containerRef }) {
   const [activeStep, setActiveStep] = useState(0)
+  const [scrollProgress, setScrollProgress] = useState(0)
   const stepRefs = useRef([])
+  const workflowRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,14 +28,52 @@ export default function TradeInWorkflow({ contentRefs = [] }) {
         }
       })
 
-      setActiveStep(closestIndex)
+      // Map content sections to workflow steps:
+      // Section 0 (Drive New Sales) -> Step 0 (Submit Trade-In)
+      // Section 1 (Intelligent Processing) -> Step 1-2 (Ship/Drop-off or Evaluation)
+      // Section 2 (Dual Channel Support) -> Step 3 (Credit Issued)
+      let mappedStep = 0
+      if (closestIndex === 0) {
+        mappedStep = 0 // Submit Trade-In
+      } else if (closestIndex === 1) {
+        // Check if we're in the first or second half of this section
+        const rect = contentRefs[1].current.getBoundingClientRect()
+        const sectionMiddle = rect.top + rect.height / 2
+        const viewportMiddle = window.innerHeight / 2
+        const relativePosition = (viewportMiddle - rect.top) / rect.height
+        
+        if (relativePosition < 0.5) {
+          mappedStep = 1 // Ship or Drop-Off
+        } else {
+          mappedStep = 2 // Evaluation
+        }
+      } else if (closestIndex === 2) {
+        mappedStep = 3 // Credit Issued
+      }
+
+      setActiveStep(mappedStep)
+
+      // Calculate scroll progress for workflow movement
+      if (containerRef?.current && workflowRef.current) {
+        const containerRect = containerRef.current.getBoundingClientRect()
+        const containerTop = containerRect.top
+        const containerHeight = containerRect.height
+        const viewportHeight = window.innerHeight
+        
+        // Calculate how far through the container we've scrolled
+        const scrollableHeight = containerHeight - viewportHeight
+        const scrolled = Math.max(0, -containerTop)
+        const progress = Math.min(1, scrolled / Math.max(scrollableHeight, 1))
+        
+        setScrollProgress(progress)
+      }
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     handleScroll()
     
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [contentRefs])
+  }, [contentRefs, containerRef])
 
   const steps = [
     {
@@ -82,8 +122,19 @@ export default function TradeInWorkflow({ contentRefs = [] }) {
     }
   ]
 
+  // Calculate vertical offset to move workflow as user scrolls
+  const maxOffset = 200 // Maximum pixels to move the workflow
+  const verticalOffset = scrollProgress * maxOffset
+
   return (
-    <div className="lg:sticky lg:top-24 lg:self-start">
+    <div 
+      ref={workflowRef}
+      className="lg:sticky lg:top-24 lg:self-start"
+      style={{
+        transform: `translateY(${verticalOffset}px)`,
+        transition: 'transform 0.3s ease-out'
+      }}
+    >
       <div 
         className="relative overflow-hidden rounded-2xl bg-white/50 border border-white/70 shadow-sm"
         style={{

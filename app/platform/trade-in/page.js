@@ -9,6 +9,7 @@ export default function TradeIn() {
   const contentRef1 = useRef(null)
   const contentRef2 = useRef(null)
   const contentRef3 = useRef(null)
+  const containerRef = useRef(null)
 
   const contentRefs = [contentRef1, contentRef2, contentRef3]
 
@@ -41,7 +42,7 @@ export default function TradeIn() {
       </section>
 
       {/* Content Section with Sidebar Workflow */}
-      <section className="bg-white px-4 py-20">
+      <section ref={containerRef} className="bg-white px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Main Content */}
@@ -79,7 +80,7 @@ export default function TradeIn() {
 
             {/* Sidebar Workflow */}
             <div className="lg:col-span-1">
-              <TradeInWorkflow contentRefs={contentRefs} />
+              <TradeInWorkflow contentRefs={contentRefs} containerRef={containerRef} />
             </div>
           </div>
         </div>
