@@ -1,6 +1,7 @@
 'use client'
 
 import { useDemoModal } from '@/components/ClientLayout'
+import DispositionRouting from '@/components/DispositionRouting'
 
 export default function IntelligentDisposition() {
   const { openDemoModal } = useDemoModal()
@@ -20,6 +21,9 @@ export default function IntelligentDisposition() {
           </p>
         </div>
       </section>
+
+      {/* Disposition Routing Visual */}
+      <DispositionRouting onRequestDemo={openDemoModal} />
 
       {/* Content Section */}
       <section className="bg-white px-4 py-20">
