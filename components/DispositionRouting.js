@@ -14,9 +14,6 @@ export default function DispositionRouting({ onRequestDemo }) {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Text and Data */}
           <div className="space-y-8">
-            <h2 className="text-5xl font-bold leading-tight">
-              Intelligent Disposition <span className="text-orange-400">Routing</span>
-            </h2>
             <p className="text-xl text-gray-300 leading-relaxed">
               Our AI-powered decision engine analyzes every return to maximize recovery value and minimize waste.
             </p>
