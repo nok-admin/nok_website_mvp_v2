@@ -2,6 +2,7 @@
 
 A beautiful, modern website built with Next.js 14, showcasing the power of React components, server-side rendering, and Tailwind CSS.
 
+
 ## ✨ Features
 
 - **🎨 Beautiful Design** - Modern gradient UI with smooth animations
