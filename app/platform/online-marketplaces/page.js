@@ -6,22 +6,36 @@ import { OnlineMarketplacesVisual } from '@/components/PlatformVisuals'
 export default function OnlineMarketplaces() {
   const { openDemoModal } = useDemoModal()
 
+  const marketplaceLogos = [
+    { name: 'Amazon Renewed', initial: 'A' },
+    { name: 'eBay Refurbished', initial: 'E' },
+    { name: 'Walmart Restored', initial: 'W' },
+    { name: 'Best Buy Outlet', initial: 'B' },
+  ]
+
   return (
     <>
-      {/* Hero Section - Marketplace logos overlay */}
+      {/* Hero Section - Marketplace Logos Collage */}
       <section className="relative overflow-hidden bg-white pt-32 pb-24">
         <div className="absolute inset-0 background-gradient opacity-30"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Marketplace Logos Overlay */}
-          <div className="grid grid-cols-4 gap-4 mb-12 opacity-20">
-            {['A', 'E', 'W', 'B'].map((logo, idx) => (
-              <div key={idx} className="aspect-square bg-gray-200 rounded-2xl flex items-center justify-center">
-                <span className="text-4xl font-bold text-gray-400">{logo}</span>
+          {/* Marketplace Logos Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            {marketplaceLogos.map((mkt, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-cyan-300 transition-all hover:shadow-lg text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-3xl font-bold text-cyan-600">{mkt.initial}</span>
+                </div>
+                <div className="text-sm font-semibold text-gray-900">{mkt.name}</div>
               </div>
             ))}
           </div>
 
+          {/* Hero Content */}
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
               Reach Millions Through Certified Marketplaces.
@@ -42,12 +56,8 @@ export default function OnlineMarketplaces() {
         </div>
       </section>
 
-      {/* Visual Section */}
-      <section className="bg-gray-50 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <OnlineMarketplacesVisual />
-        </div>
-      </section>
+      {/* Content Tiles & Integration Diagram */}
+      <OnlineMarketplacesVisual />
 
       {/* Content Section */}
       <section className="bg-white px-4 py-20">

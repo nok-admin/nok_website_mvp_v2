@@ -8,12 +8,12 @@ export default function ExcessSales() {
 
   return (
     <>
-      {/* Hero Section - Spoiler Alert-inspired with warm imagery */}
+      {/* Hero Section - Warehouse/Secondary Buyer Visual */}
       <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 pt-32 pb-24">
         <div className="absolute inset-0 background-gradient opacity-20"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Content */}
             <div>
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
@@ -33,30 +33,31 @@ export default function ExcessSales() {
               </button>
             </div>
 
-            {/* Right: Warehouse/Product Visual */}
+            {/* Right: Warehouse/Inventory Visual */}
             <div className="relative">
               <div className="bg-white rounded-3xl p-8 border-2 border-orange-200 shadow-2xl">
-                <div className="grid grid-cols-3 gap-4">
-                  {[1, 2, 3, 4, 5, 6].map((i) => (
-                    <div key={i} className="aspect-square bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl border border-orange-200"></div>
+                {/* Warehouse Grid */}
+                <div className="grid grid-cols-4 gap-3 mb-6">
+                  {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                    <div key={i} className="aspect-square bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg border border-orange-200"></div>
                   ))}
                 </div>
-                <div className="text-center text-sm text-gray-600 mt-4">Excess Inventory Management</div>
+                <div className="flex items-center justify-center gap-4">
+                  <div className="flex-1 h-1 bg-gradient-to-r from-orange-300 to-amber-300 rounded"></div>
+                  <div className="text-sm font-semibold text-gray-700">Excess Inventory</div>
+                  <div className="flex-1 h-1 bg-gradient-to-r from-amber-300 to-orange-300 rounded"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Visual Section */}
-      <section className="bg-white px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <ExcessSalesVisual />
-        </div>
-      </section>
+      {/* Metrics & Partner Logos */}
+      <ExcessSalesVisual />
 
       {/* Content Section */}
-      <section className="bg-gray-50 px-4 py-20">
+      <section className="bg-white px-4 py-20">
         <div className="max-w-4xl mx-auto space-y-16">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Strategic Inventory Management</h2>
@@ -78,7 +79,7 @@ export default function ExcessSales() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 px-4 bg-white">
+      <section className="relative py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Turn excess inventory into revenue

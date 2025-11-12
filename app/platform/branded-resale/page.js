@@ -8,19 +8,19 @@ export default function BrandedResale() {
 
   return (
     <>
-      {/* Hero Section - Archive-inspired */}
+      {/* Hero Section */}
       <section className="relative overflow-hidden bg-white pt-32 pb-24">
         <div className="absolute inset-0 background-gradient opacity-30"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Content */}
             <div>
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
                 Resale That Looks Like Your Brand.
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light">
-                Nok powers fully branded resale experiences for consumer brands — seamlessly integrated, performance-driven, and sustainable.
+                Nok powers fully branded resale experiences for leading consumer brands.
               </p>
               <button 
                 onClick={openDemoModal}
@@ -33,36 +33,34 @@ export default function BrandedResale() {
               </button>
             </div>
 
-            {/* Right: Storefront Mockup */}
+            {/* Right: Storefront Visual */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border-2 border-gray-200 shadow-2xl">
-                <div className="bg-white rounded-2xl p-6 border border-gray-200 mb-4">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-gray-200 rounded-lg"></div>
-                    <div className="flex-1">
-                      <div className="h-4 bg-gray-200 rounded w-32 mb-2"></div>
-                      <div className="h-3 bg-gray-100 rounded w-24"></div>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-3 gap-3">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="aspect-square bg-gray-100 rounded-lg"></div>
-                    ))}
+              <div className="bg-white rounded-3xl p-8 border-2 border-gray-200 shadow-2xl">
+                {/* Storefront Header */}
+                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-200">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-lg"></div>
+                  <div className="flex-1">
+                    <div className="h-4 bg-gray-900 rounded w-32 mb-2"></div>
+                    <div className="h-3 bg-gray-300 rounded w-24"></div>
                   </div>
                 </div>
-                <div className="text-center text-sm text-gray-500">Branded Resale Storefront</div>
+                {/* Product Grid */}
+                <div className="grid grid-cols-3 gap-4">
+                  {[1, 2, 3, 4, 5, 6].map((i) => (
+                    <div key={i} className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200"></div>
+                  ))}
+                </div>
+                <div className="mt-6 text-center text-sm text-gray-500 font-medium">
+                  Branded Resale Storefront
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Visual Section */}
-      <section className="bg-gray-50 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <BrandedResaleVisual />
-        </div>
-      </section>
+      {/* Brand Examples & Infrastructure */}
+      <BrandedResaleVisual />
 
       {/* Content Section */}
       <section className="bg-white px-4 py-20">

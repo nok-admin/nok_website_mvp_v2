@@ -8,35 +8,53 @@ export default function TradeIn() {
 
   return (
     <>
-      {/* Hero Section - Trove-inspired with side-by-side */}
+      {/* Hero Section - Split Visual */}
       <section className="relative overflow-hidden bg-white pt-32 pb-24">
         <div className="absolute inset-0 background-gradient opacity-30"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            {/* Left: Digital Trade-In */}
+          {/* Split Visual */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+            {/* Digital Trade-In */}
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-12 border-2 border-blue-200">
-              <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-blue-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+                <div className="mb-6">
+                  <div className="h-10 bg-gray-200 rounded-lg mb-4"></div>
+                  <div className="space-y-3">
+                    <div className="h-12 bg-gray-100 rounded-lg"></div>
+                    <div className="h-12 bg-gray-100 rounded-lg"></div>
+                    <div className="h-12 bg-blue-500 rounded-lg"></div>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Digital Trade-In</h3>
-                <p className="text-gray-600">Online experience</p>
+                <div className="text-center">
+                  <div className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Digital Trade-In
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Right: In-Store Trade-In */}
+            {/* In-Store Trade-In */}
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-12 border-2 border-purple-200">
-              <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+                <div className="flex items-center justify-center gap-6 mb-6">
+                  <div className="w-20 h-20 bg-gray-200 rounded-full"></div>
+                  <svg className="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
+                  <div className="w-16 h-16 bg-gray-300 rounded-lg"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">In-Store Trade-In</h3>
-                <p className="text-gray-600">Physical drop-off</p>
+                <div className="text-center">
+                  <div className="inline-flex items-center gap-2 text-sm font-semibold text-purple-600">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                    In-Store Trade-In
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -62,12 +80,8 @@ export default function TradeIn() {
         </div>
       </section>
 
-      {/* Visual Section */}
-      <section className="bg-gray-50 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <TradeInVisual />
-        </div>
-      </section>
+      {/* Flow Diagram */}
+      <TradeInVisual />
 
       {/* Content Section */}
       <section className="bg-white px-4 py-20">
