@@ -19,7 +19,7 @@ export default function TradeInWorkflow() {
     {
       number: 2,
       title: 'SELECT PRODUCT',
-      description: 'Customer browses through a comprehensive list of SKUs to identify their specific product model for accurate valuation.',
+      description: 'Customer browses through a comprehensive list of Brand SKUs to identify their specific product model for accurate valuation.',
       status: 'Product Identification',
       icon: (
         <svg className="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -293,7 +293,7 @@ export default function TradeInWorkflow() {
             </svg>
             <h2 className="text-3xl font-bold mb-4">Trade-In Process Complete</h2>
             <p className="text-xl opacity-90 mb-8">
-              Your customer now has their trade-in credit and can continue shopping with confidence
+              Turn customer trade-ins into revenue while driving new sales and maximizing recovery value for your brand
             </p>
             <div className="flex justify-center items-center space-x-8">
               <div className="text-center">
