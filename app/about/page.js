@@ -159,8 +159,8 @@ export default function About() {
             </div>
           </div>
 
-          {/* Bottom Row - 4 members centered */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10 max-w-5xl mx-auto">
+          {/* Bottom Row - 3 members centered */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10 max-w-4xl mx-auto justify-items-center">
             {/* Team Member 5 - Xavi Facon */}
             <div className="group text-center">
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100 border border-gray-200 relative group-hover:border-gray-400 transition-all">
