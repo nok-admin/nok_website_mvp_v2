@@ -2,9 +2,15 @@
 
 import { useDemoModal } from '@/components/ClientLayout'
 import TradeInWorkflow from '@/components/TradeInWorkflow'
+import { useRef } from 'react'
 
 export default function TradeIn() {
   const { openDemoModal } = useDemoModal()
+  const contentRef1 = useRef(null)
+  const contentRef2 = useRef(null)
+  const contentRef3 = useRef(null)
+
+  const contentRefs = [contentRef1, contentRef2, contentRef3]
 
   return (
     <>
@@ -37,35 +43,35 @@ export default function TradeIn() {
       {/* Content Section with Sidebar Workflow */}
       <section className="bg-white px-4 py-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-16">
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">Drive New Sales</h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            <div className="space-y-16">
+              <div ref={contentRef1} className="bg-white/50 rounded-2xl p-6 border border-white/70 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Drive New Sales</h2>
+                <p className="text-base text-gray-800 leading-relaxed mb-4">
                   Trade-in programs are powerful tools for driving new product sales. By offering customers credit for their old products, you create a compelling incentive to upgrade while simultaneously acquiring inventory for your resale channels.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-base text-gray-800 leading-relaxed">
                   Our platform provides real-time trade-in valuations based on product condition, market demand, and your inventory needs, ensuring you offer competitive prices that drive conversions while maintaining profitable unit economics.
                 </p>
               </div>
 
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">Intelligent Processing</h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              <div ref={contentRef2} className="bg-white/50 rounded-2xl p-6 border border-white/70 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Intelligent Processing</h2>
+                <p className="text-base text-gray-800 leading-relaxed mb-4">
                   Once trade-ins are received, <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span>'s intelligent disposition engine automatically routes items to the highest-value outcome—whether that's refurbishment for resale, component harvesting, or recycling. This ensures maximum recovery value while minimizing processing time and costs.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-base text-gray-800 leading-relaxed">
                   The system continuously learns from every disposition outcome, improving routing accuracy over time. As it processes more returns and tracks recovery results, it becomes increasingly effective at identifying the optimal path for each product.
                 </p>
               </div>
 
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">Dual Channel Support</h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              <div ref={contentRef3} className="bg-white/50 rounded-2xl p-6 border border-white/70 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Dual Channel Support</h2>
+                <p className="text-base text-gray-800 leading-relaxed mb-4">
                   Whether customers prefer the convenience of digital trade-ins or the personal touch of in-store transactions, <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span> supports both channels seamlessly. Digital trade-ins allow customers to initiate the process online, upload photos, and receive shipping labels instantly.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-base text-gray-800 leading-relaxed">
                   In-store trade-ins provide immediate customer service and can drive foot traffic to retail locations. Both channels integrate with the same intelligent processing system, ensuring consistent valuation and routing regardless of entry point.
                 </p>
               </div>
@@ -73,7 +79,7 @@ export default function TradeIn() {
 
             {/* Sidebar Workflow */}
             <div className="lg:col-span-1">
-              <TradeInWorkflow />
+              <TradeInWorkflow contentRefs={contentRefs} />
             </div>
           </div>
         </div>
