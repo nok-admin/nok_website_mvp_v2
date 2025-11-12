@@ -8,57 +8,11 @@ export default function TradeIn() {
 
   return (
     <>
-      {/* Hero Section - Split Visual */}
+      {/* Hero Section */}
       <section className="relative overflow-hidden bg-white pt-32 pb-24">
         <div className="absolute inset-0 background-gradient opacity-30"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Split Visual */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            {/* Digital Trade-In */}
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-12 border-2 border-blue-200">
-              <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
-                <div className="mb-6">
-                  <div className="h-10 bg-gray-200 rounded-lg mb-4"></div>
-                  <div className="space-y-3">
-                    <div className="h-12 bg-gray-100 rounded-lg"></div>
-                    <div className="h-12 bg-gray-100 rounded-lg"></div>
-                    <div className="h-12 bg-blue-500 rounded-lg"></div>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Digital Trade-In
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* In-Store Trade-In */}
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-12 border-2 border-purple-200">
-              <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
-                <div className="flex items-center justify-center gap-6 mb-6">
-                  <div className="w-20 h-20 bg-gray-200 rounded-full"></div>
-                  <svg className="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                  <div className="w-16 h-16 bg-gray-300 rounded-lg"></div>
-                </div>
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 text-sm font-semibold text-purple-600">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                    In-Store Trade-In
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Hero Content */}
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
@@ -80,27 +34,47 @@ export default function TradeIn() {
         </div>
       </section>
 
-      {/* Trade-In Workflow */}
-      <TradeInWorkflow />
-
-      {/* Content Section */}
+      {/* Content Section with Sidebar Workflow */}
       <section className="bg-white px-4 py-20">
-        <div className="max-w-4xl mx-auto space-y-16">
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Drive New Sales</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Trade-in programs are powerful tools for driving new product sales. By offering customers credit for their old products, you create a compelling incentive to upgrade while simultaneously acquiring inventory for your resale channels.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Our platform provides real-time trade-in valuations based on product condition, market demand, and your inventory needs, ensuring you offer competitive prices that drive conversions while maintaining profitable unit economics.
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-12">
+            {/* Main Content */}
+            <div className="lg:col-span-2 space-y-16">
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">Drive New Sales</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  Trade-in programs are powerful tools for driving new product sales. By offering customers credit for their old products, you create a compelling incentive to upgrade while simultaneously acquiring inventory for your resale channels.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Our platform provides real-time trade-in valuations based on product condition, market demand, and your inventory needs, ensuring you offer competitive prices that drive conversions while maintaining profitable unit economics.
+                </p>
+              </div>
 
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Intelligent Processing</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Once trade-ins are received, <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span>'s intelligent disposition engine automatically routes items to the highest-value outcome—whether that's refurbishment for resale, component harvesting, or recycling. This ensures maximum recovery value while minimizing processing time and costs.
-            </p>
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">Intelligent Processing</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  Once trade-ins are received, <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span>'s intelligent disposition engine automatically routes items to the highest-value outcome—whether that's refurbishment for resale, component harvesting, or recycling. This ensures maximum recovery value while minimizing processing time and costs.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  The system continuously learns from every disposition outcome, improving routing accuracy over time. As it processes more returns and tracks recovery results, it becomes increasingly effective at identifying the optimal path for each product.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">Dual Channel Support</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  Whether customers prefer the convenience of digital trade-ins or the personal touch of in-store transactions, <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span> supports both channels seamlessly. Digital trade-ins allow customers to initiate the process online, upload photos, and receive shipping labels instantly.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  In-store trade-ins provide immediate customer service and can drive foot traffic to retail locations. Both channels integrate with the same intelligent processing system, ensuring consistent valuation and routing regardless of entry point.
+                </p>
+              </div>
+            </div>
+
+            {/* Sidebar Workflow */}
+            <div className="lg:col-span-1">
+              <TradeInWorkflow />
+            </div>
           </div>
         </div>
       </section>
