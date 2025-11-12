@@ -8,30 +8,56 @@ export default function ExcessSales() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative px-4 overflow-hidden bg-white pt-32 pb-20">
-        <div className="absolute inset-0 background-gradient opacity-40"></div>
+      {/* Hero Section - Spoiler Alert-inspired with warm imagery */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 pt-32 pb-24">
+        <div className="absolute inset-0 background-gradient opacity-20"></div>
         
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 text-gray-900 leading-[1.1] tracking-tight">
-            Excess Sales
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed font-light">
-            Transform excess inventory, overstock, and slow-moving products into revenue through strategic liquidation channels.
-          </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+                Turn Excess Into Opportunity.
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light">
+                Nok helps brands recover value from surplus and open-box inventory through trusted resale networks.
+              </p>
+              <button 
+                onClick={openDemoModal}
+                className="px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition-all inline-flex items-center shadow-lg hover:shadow-xl"
+              >
+                Recover Value Responsibly
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Right: Warehouse/Product Visual */}
+            <div className="relative">
+              <div className="bg-white rounded-3xl p-8 border-2 border-orange-200 shadow-2xl">
+                <div className="grid grid-cols-3 gap-4">
+                  {[1, 2, 3, 4, 5, 6].map((i) => (
+                    <div key={i} className="aspect-square bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl border border-orange-200"></div>
+                  ))}
+                </div>
+                <div className="text-center text-sm text-gray-600 mt-4">Excess Inventory Management</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Visual Section */}
-      <section className="bg-gray-50 px-4 py-20">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-white px-4 py-20">
+        <div className="max-w-7xl mx-auto">
           <ExcessSalesVisual />
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="bg-white px-4 py-20">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <section className="bg-gray-50 px-4 py-20">
+        <div className="max-w-4xl mx-auto space-y-16">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Strategic Inventory Management</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -39,26 +65,6 @@ export default function ExcessSales() {
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span> provides intelligent excess sales solutions that help you identify inventory that should be liquidated, determine optimal pricing strategies, and route products to the most profitable sales channels.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Maximize Recovery Value</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Not all excess inventory should be sold through the same channels. Our platform analyzes product characteristics, market conditions, and brand considerations to determine whether items should be sold through branded channels, marketplaces, bulk liquidation, or specialized excess sales platforms.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              This data-driven approach ensures you maximize recovery value while protecting brand integrity and avoiding channel conflicts with your primary sales channels.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Automated Workflows</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Excess sales shouldn't require manual intervention for every SKU. <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span> automates the entire process—from identifying excess inventory in your system to listing products on appropriate channels and managing fulfillment.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Set rules based on inventory age, velocity, and profitability, and let the platform automatically route excess products to the most profitable disposition channels while maintaining full visibility and control.
             </p>
           </div>
 
@@ -72,7 +78,7 @@ export default function ExcessSales() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 px-4 bg-gray-50">
+      <section className="relative py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Turn excess inventory into revenue
@@ -83,7 +89,7 @@ export default function ExcessSales() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={openDemoModal}
-              className="group px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all inline-flex items-center justify-center"
+              className="group px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all inline-flex items-center justify-center shadow-lg"
             >
               Request a Demo
               <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,4 +108,3 @@ export default function ExcessSales() {
     </>
   )
 }
-

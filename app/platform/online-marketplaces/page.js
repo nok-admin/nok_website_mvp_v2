@@ -8,40 +8,50 @@ export default function OnlineMarketplaces() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative px-4 overflow-hidden bg-white pt-32 pb-20">
-        <div className="absolute inset-0 background-gradient opacity-40"></div>
+      {/* Hero Section - Marketplace logos overlay */}
+      <section className="relative overflow-hidden bg-white pt-32 pb-24">
+        <div className="absolute inset-0 background-gradient opacity-30"></div>
         
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 text-gray-900 leading-[1.1] tracking-tight">
-            Online Marketplaces
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed font-light">
-            Expand your reach and maximize recovery through supplemental selling channels across major online marketplaces.
-          </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Marketplace Logos Overlay */}
+          <div className="grid grid-cols-4 gap-4 mb-12 opacity-20">
+            {['A', 'E', 'W', 'B'].map((logo, idx) => (
+              <div key={idx} className="aspect-square bg-gray-200 rounded-2xl flex items-center justify-center">
+                <span className="text-4xl font-bold text-gray-400">{logo}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+              Reach Millions Through Certified Marketplaces.
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light">
+              Nok automates marketplace listings and compliance for every resale channel.
+            </p>
+            <button 
+              onClick={openDemoModal}
+              className="px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition-all inline-flex items-center shadow-lg hover:shadow-xl"
+            >
+              Expand Your Reach with Nok
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
       {/* Visual Section */}
       <section className="bg-gray-50 px-4 py-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <OnlineMarketplacesVisual />
         </div>
       </section>
 
       {/* Content Section */}
       <section className="bg-white px-4 py-20">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Supplemental Selling Channels</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Online marketplaces serve as powerful supplemental channels for moving refurbished inventory at scale. By listing products across multiple platforms—from Amazon and eBay to specialized marketplaces—you can reach broader audiences and optimize pricing based on platform-specific demand.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span> integrates with leading marketplace platforms, enabling automated listing, inventory synchronization, and order management across all your sales channels. This multi-channel approach ensures maximum exposure and faster inventory turnover.
-            </p>
-          </div>
-
+        <div className="max-w-4xl mx-auto space-y-16">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Intelligent Channel Selection</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -73,7 +83,7 @@ export default function OnlineMarketplaces() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={openDemoModal}
-              className="group px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all inline-flex items-center justify-center"
+              className="group px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all inline-flex items-center justify-center shadow-lg"
             >
               Request a Demo
               <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,4 +102,3 @@ export default function OnlineMarketplaces() {
     </>
   )
 }
-

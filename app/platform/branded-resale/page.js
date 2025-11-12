@@ -8,30 +8,65 @@ export default function BrandedResale() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative px-4 overflow-hidden bg-white pt-32 pb-20">
-        <div className="absolute inset-0 background-gradient opacity-40"></div>
+      {/* Hero Section - Archive-inspired */}
+      <section className="relative overflow-hidden bg-white pt-32 pb-24">
+        <div className="absolute inset-0 background-gradient opacity-30"></div>
         
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 text-gray-900 leading-[1.1] tracking-tight">
-            Branded Resale
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed font-light">
-            Maintain brand integrity while maximizing recovery value through controlled, brand-managed resale channels.
-          </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+                Resale That Looks Like Your Brand.
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light">
+                Nok powers fully branded resale experiences for consumer brands — seamlessly integrated, performance-driven, and sustainable.
+              </p>
+              <button 
+                onClick={openDemoModal}
+                className="px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition-all inline-flex items-center shadow-lg hover:shadow-xl"
+              >
+                See How Nok Builds Resale Programs
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Right: Storefront Mockup */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border-2 border-gray-200 shadow-2xl">
+                <div className="bg-white rounded-2xl p-6 border border-gray-200 mb-4">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gray-200 rounded-lg"></div>
+                    <div className="flex-1">
+                      <div className="h-4 bg-gray-200 rounded w-32 mb-2"></div>
+                      <div className="h-3 bg-gray-100 rounded w-24"></div>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="aspect-square bg-gray-100 rounded-lg"></div>
+                    ))}
+                  </div>
+                </div>
+                <div className="text-center text-sm text-gray-500">Branded Resale Storefront</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Visual Section */}
       <section className="bg-gray-50 px-4 py-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <BrandedResaleVisual />
         </div>
       </section>
 
       {/* Content Section */}
       <section className="bg-white px-4 py-20">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="max-w-4xl mx-auto space-y-16">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Control Your Brand Narrative</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
@@ -51,13 +86,6 @@ export default function BrandedResale() {
               Our platform enables intelligent pricing strategies that optimize for both recovery value and brand protection, ensuring you maximize revenue without compromising your brand positioning.
             </p>
           </div>
-
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Seamless Integration</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span>'s branded resale solution integrates seamlessly with your existing e-commerce infrastructure, allowing you to manage both new and refurbished inventory from a single platform. Automated workflows ensure returned products are quickly processed, refurbished to warranty-grade standards, and listed on your branded channels.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -73,7 +101,7 @@ export default function BrandedResale() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={openDemoModal}
-              className="group px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all inline-flex items-center justify-center"
+              className="group px-8 py-4 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all inline-flex items-center justify-center shadow-lg"
             >
               Request a Demo
               <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,4 +120,3 @@ export default function BrandedResale() {
     </>
   )
 }
-
