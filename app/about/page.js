@@ -170,7 +170,7 @@ export default function About() {
                   </div>
                 ) : (
                   <Image 
-                    src="/team/Xavi Facon.jpg"
+                    src="/team/Xavi Headshot.jpg"
                     alt="Xavi Facon"
                     fill
                     className="object-cover"
