@@ -1,6 +1,7 @@
 'use client'
 
 import { useDemoModal } from '@/components/ClientLayout'
+import { ExcessSalesVisual } from '@/components/PlatformVisuals'
 
 export default function ExcessSales() {
   const { openDemoModal } = useDemoModal()
@@ -18,6 +19,13 @@ export default function ExcessSales() {
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed font-light">
             Transform excess inventory, overstock, and slow-moving products into revenue through strategic liquidation channels.
           </p>
+        </div>
+      </section>
+
+      {/* Visual Section */}
+      <section className="bg-gray-50 px-4 py-20">
+        <div className="max-w-6xl mx-auto">
+          <ExcessSalesVisual />
         </div>
       </section>
 

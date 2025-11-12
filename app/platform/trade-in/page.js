@@ -1,6 +1,7 @@
 'use client'
 
 import { useDemoModal } from '@/components/ClientLayout'
+import { TradeInVisual } from '@/components/PlatformVisuals'
 
 export default function TradeIn() {
   const { openDemoModal } = useDemoModal()
@@ -18,6 +19,13 @@ export default function TradeIn() {
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed font-light">
             Turn customer trade-ins into revenue through digital and in-store programs that drive new sales while maximizing recovery value.
           </p>
+        </div>
+      </section>
+
+      {/* Visual Section */}
+      <section className="bg-gray-50 px-4 py-20">
+        <div className="max-w-6xl mx-auto">
+          <TradeInVisual />
         </div>
       </section>
 

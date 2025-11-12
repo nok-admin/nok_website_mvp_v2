@@ -1,6 +1,7 @@
 'use client'
 
 import { useDemoModal } from '@/components/ClientLayout'
+import { OnlineMarketplacesVisual } from '@/components/PlatformVisuals'
 
 export default function OnlineMarketplaces() {
   const { openDemoModal } = useDemoModal()
@@ -18,6 +19,13 @@ export default function OnlineMarketplaces() {
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed font-light">
             Expand your reach and maximize recovery through supplemental selling channels across major online marketplaces.
           </p>
+        </div>
+      </section>
+
+      {/* Visual Section */}
+      <section className="bg-gray-50 px-4 py-20">
+        <div className="max-w-6xl mx-auto">
+          <OnlineMarketplacesVisual />
         </div>
       </section>
 
