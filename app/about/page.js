@@ -122,25 +122,6 @@ export default function About() {
             <div className="group text-center">
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100 border border-gray-200 relative group-hover:border-gray-400 transition-all">
                 <Image 
-                  src="/team/Blake Vaughn.jpeg"
-                  alt="Blake Vaughn"
-                  fill
-                  className="object-cover"
-                  sizes="128px"
-                  quality={95}
-                />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-1">Blake Vaughn</h3>
-              <p className="text-gray-600 font-medium mb-2 text-sm">3PL & Ops Advisor</p>
-              <p className="text-xs text-gray-500 leading-relaxed">
-                Fmr. President, Transcorp Services
-              </p>
-            </div>
-
-            {/* Team Member 4 */}
-            <div className="group text-center">
-              <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100 border border-gray-200 relative group-hover:border-gray-400 transition-all">
-                <Image 
                   src="/team/Sam Brzowski.jpg"
                   alt="Sam Brzowski"
                   fill
@@ -155,11 +136,8 @@ export default function About() {
                 Fmr. Head, Data @ PriceSpider
               </p>
             </div>
-          </div>
 
-          {/* Bottom Row - 3 members centered */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10 max-w-3xl mx-auto">
-            {/* Team Member 5 */}
+            {/* Team Member 4 */}
             <div className="group text-center">
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100 border border-gray-200 relative group-hover:border-gray-400 transition-all">
                 <Image 
@@ -177,24 +155,38 @@ export default function About() {
                 Fmr. Product @ CaseStack
               </p>
             </div>
+          </div>
 
-            {/* Team Member 6 */}
+          {/* Bottom Row - 4 members centered */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10 max-w-5xl mx-auto">
+            {/* Team Member 5 - Xavi Facon */}
             <div className="group text-center">
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100 border border-gray-200 relative group-hover:border-gray-400 transition-all">
                 <Image 
-                  src="/team/Bruce Seidel.jpg"
-                  alt="Bruce Seidel"
+                  src="/team/Xavi Facon.jpg"
+                  alt="Xavi Facon"
                   fill
                   className="object-cover"
                   sizes="128px"
                   quality={95}
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-1">Bruce Seidel</h3>
-              <p className="text-gray-600 font-medium mb-2 text-sm">Head of Operations</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-1">Xavi Facon</h3>
+              <p className="text-gray-600 font-medium mb-2 text-sm">Head of Engineering</p>
               <p className="text-xs text-gray-500 leading-relaxed">
-                Fmr. Private Equity @ eGateway Capital
+                Fmr. Global Product @ NielsenIQ
               </p>
+            </div>
+
+            {/* Team Member 6 - Griffin Parrill */}
+            <div className="group text-center">
+              <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100 border border-gray-200 relative group-hover:border-gray-400 transition-all">
+                <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                  <span className="text-4xl font-bold text-gray-500">G</span>
+                </div>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-1">Griffin Parrill</h3>
+              <p className="text-gray-600 font-medium mb-2 text-sm">Operations Lead</p>
             </div>
 
             {/* Team Member 7 */}
