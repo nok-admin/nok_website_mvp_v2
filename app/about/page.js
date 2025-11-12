@@ -2,9 +2,11 @@
 
 import { useDemoModal } from '@/components/ClientLayout'
 import Image from 'next/image'
+import { useState } from 'react'
 
 export default function About() {
   const { openDemoModal } = useDemoModal()
+  const [xaviImageError, setXaviImageError] = useState(false)
 
   return (
     <>
@@ -162,14 +164,21 @@ export default function About() {
             {/* Team Member 5 - Xavi Facon */}
             <div className="group text-center">
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100 border border-gray-200 relative group-hover:border-gray-400 transition-all">
-                <Image 
-                  src="/team/Xavi Facon.jpg"
-                  alt="Xavi Facon"
-                  fill
-                  className="object-cover"
-                  sizes="128px"
-                  quality={95}
-                />
+                {xaviImageError ? (
+                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-gray-500">X</span>
+                  </div>
+                ) : (
+                  <Image 
+                    src="/team/Xavi Facon.jpg"
+                    alt="Xavi Facon"
+                    fill
+                    className="object-cover"
+                    sizes="128px"
+                    quality={95}
+                    onError={() => setXaviImageError(true)}
+                  />
+                )}
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-1">Xavi Facon</h3>
               <p className="text-gray-600 font-medium mb-2 text-sm">Head of Engineering</p>
