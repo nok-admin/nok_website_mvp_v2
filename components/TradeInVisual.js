@@ -49,25 +49,11 @@ export default function TradeInVisual() {
   return (
     <div className="py-8 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6 md:gap-4 relative">
           {steps.map((step, idx) => (
-            <div key={idx} className="flex flex-col items-center relative">
-              {/* Connector Arrow */}
-              {idx < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-full w-full h-0.5 z-0" style={{ width: 'calc(100% - 64px)', left: 'calc(50% + 32px)' }}>
-                  <div className="relative w-full h-full">
-                    <div className="absolute inset-0 h-0.5 bg-gradient-to-r from-cyan-200 to-blue-200"></div>
-                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2">
-                      <svg className="w-4 h-4 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              )}
-              
+            <div key={idx} className="flex flex-col items-center relative flex-1">
               {/* Step Card */}
-              <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm w-full">
+              <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm w-full relative z-10">
                 {/* Step Number Badge */}
                 <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center mx-auto mb-4`}>
                   <div className="text-white">
@@ -88,6 +74,15 @@ export default function TradeInVisual() {
                   </p>
                 </div>
               </div>
+              
+              {/* Connector Arrow - only show between cards on desktop */}
+              {idx < steps.length - 1 && (
+                <div className="hidden md:block absolute top-8 right-0 transform translate-x-full z-20" style={{ marginRight: '-16px' }}>
+                  <svg className="w-6 h-6 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              )}
             </div>
           ))}
         </div>

@@ -38,7 +38,7 @@ export default function BrandedResale() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-gray-200 bg-white">
                 <Image
-                  src="/images/branded-resale-2.png"
+                  src="/images/branded-resale-3.png"
                   alt="Branded resale storefront showing tablet and smartphone displaying REFURBISH website with outdoor gear and gadgets"
                   width={800}
                   height={600}
