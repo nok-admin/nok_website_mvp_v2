@@ -2,6 +2,7 @@
 
 import { useDemoModal } from '@/components/ClientLayout'
 import TradeInWorkflow from '@/components/TradeInWorkflow'
+import TradeInVisual from '@/components/TradeInVisual'
 import { useRef } from 'react'
 
 export default function TradeIn() {
@@ -38,6 +39,21 @@ export default function TradeIn() {
               </svg>
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* Workflow Visual Section */}
+      <section className="relative bg-gradient-to-br from-gray-50 to-white py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              How Trade-In Works
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              A seamless process from submission to credit, designed to drive new sales and maximize recovery value.
+            </p>
+          </div>
+          <TradeInVisual />
         </div>
       </section>
 
