@@ -42,27 +42,34 @@ export default function ExcessSales() {
         </div>
       </section>
 
-      {/* Metrics & Partner Logos */}
-      <ExcessSalesVisual />
-
-      {/* Content Section */}
+      {/* Content Section with Visual Sidebar */}
       <section className="bg-white px-4 py-20">
-        <div className="max-w-4xl mx-auto space-y-16">
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Strategic Inventory Management</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Excess inventory represents a significant opportunity cost. Whether it's overstock from seasonal campaigns, discontinued products, or slow-moving SKUs, holding excess inventory ties up capital and warehouse space while products depreciate in value.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span> provides intelligent excess sales solutions that help you identify inventory that should be liquidated, determine optimal pricing strategies, and route products to the most profitable sales channels.
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left: Content Paragraphs */}
+            <div className="space-y-16">
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">Strategic Inventory Management</h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  Excess inventory represents a significant opportunity cost. Whether it's overstock from seasonal campaigns, discontinued products, or slow-moving SKUs, holding excess inventory ties up capital and warehouse space while products depreciate in value.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span> provides intelligent excess sales solutions that help you identify inventory that should be liquidated, determine optimal pricing strategies, and route products to the most profitable sales channels.
+                </p>
+              </div>
 
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Protect Brand Value</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Excess sales can impact brand perception if not managed carefully. Our platform includes brand protection features that ensure excess inventory is sold through appropriate channels at appropriate price points, maintaining brand integrity while maximizing recovery.
-            </p>
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">Protect Brand Value</h2>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Excess sales can impact brand perception if not managed carefully. Our platform includes brand protection features that ensure excess inventory is sold through appropriate channels at appropriate price points, maintaining brand integrity while maximizing recovery.
+                </p>
+              </div>
+            </div>
+
+            {/* Right: Metrics & Network Visual */}
+            <div className="lg:sticky lg:top-24">
+              <ExcessSalesVisual />
+            </div>
           </div>
         </div>
       </section>

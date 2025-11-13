@@ -302,68 +302,60 @@ export function ExcessSalesVisual() {
   ]
 
   return (
-    <>
-      {/* Metrics Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Recovery Performance
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {metrics.map((metric, idx) => (
-              <div
-                key={idx}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200 text-center"
-                style={{ boxShadow: 'var(--shadow-sm), var(--shadow-border)' }}
-              >
-                <div className="text-5xl font-bold text-cyan-600 mb-2">{metric.value}</div>
-                <div className="text-lg font-semibold text-gray-900 mb-2">{metric.label}</div>
-                {metric.description && (
-                  <div className="text-sm text-gray-600">{metric.description}</div>
-                )}
-              </div>
-            ))}
-          </div>
+    <div className="space-y-12">
+      {/* Recovery Performance */}
+      <div>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-left">
+          Recovery Performance
+        </h2>
+        <div className="space-y-4">
+          {metrics.map((metric, idx) => (
+            <div
+              key={idx}
+              className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200 text-center"
+              style={{ boxShadow: 'var(--shadow-sm), var(--shadow-border)' }}
+            >
+              <div className="text-4xl font-bold text-cyan-600 mb-2">{metric.value}</div>
+              <div className="text-base font-semibold text-gray-900 mb-1">{metric.label}</div>
+              {metric.description && (
+                <div className="text-sm text-gray-600">{metric.description}</div>
+              )}
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
-      {/* Geographical Buyer Network */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Trusted Resale Network
-          </h2>
-          <div className="bg-white rounded-3xl p-12 border border-gray-200 shadow-lg">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Domestic Buyers */}
-              <div className="text-center">
-                <div className="mb-6">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl flex items-center justify-center border-2 border-cyan-200 shadow-md mb-4">
-                    <svg className="w-16 h-16 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Domestic</h3>
-                  <p className="text-gray-600">North American buyers across all regions</p>
-                </div>
+      {/* Trusted Resale Network */}
+      <div>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-left">
+          Trusted Resale Network
+        </h2>
+        <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+          <div className="space-y-8">
+            {/* Domestic Buyers */}
+            <div className="text-center">
+              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl flex items-center justify-center border-2 border-cyan-200 shadow-md mb-4">
+                <svg className="w-12 h-12 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Domestic</h3>
+              <p className="text-sm text-gray-600">North American buyers across all regions</p>
+            </div>
 
-              {/* International Buyers */}
-              <div className="text-center">
-                <div className="mb-6">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center border-2 border-blue-200 shadow-md mb-4">
-                    <svg className="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">International</h3>
-                  <p className="text-gray-600">Global buyers across multiple continents</p>
-                </div>
+            {/* International Buyers */}
+            <div className="text-center">
+              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center border-2 border-blue-200 shadow-md mb-4">
+                <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
               </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">International</h3>
+              <p className="text-sm text-gray-600">Global buyers across multiple continents</p>
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   )
 }
