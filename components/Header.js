@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Header({ onRequestDemo }) {
@@ -13,7 +14,14 @@ export default function Header({ onRequestDemo }) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-4xl font-black text-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span>
+            <Image
+              src="/logos/nok recommerce logo copy.png"
+              alt="nok"
+              width={120}
+              height={40}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

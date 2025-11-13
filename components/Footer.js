@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -8,7 +9,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2">
             <div className="mb-4">
-              <span className="text-4xl font-black text-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span>
+              <Image
+                src="/logos/nok recommerce logo copy.png"
+                alt="nok"
+                width={120}
+                height={40}
+                className="h-8 w-auto"
+              />
             </div>
             <p className="text-gray-600 max-w-sm mb-4">
               The platform that turns returns into revenue. Built for brands to take control of their reverse supply chain.

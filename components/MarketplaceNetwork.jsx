@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { ShoppingCart, TrendingUp, Globe, CheckCircle } from 'lucide-react'
+import { TrendingUp, Globe, CheckCircle } from 'lucide-react'
 
 export default function MarketplaceNetwork() {
   const [activeMarketplace, setActiveMarketplace] = useState(0)
@@ -142,9 +142,14 @@ export default function MarketplaceNetwork() {
             ))}
 
             {/* Central node */}
-            <div className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-full w-24 h-24 sm:w-28 sm:h-28 shadow-xl flex flex-col items-center justify-center gap-1">
-              <ShoppingCart className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-              <span className="text-white font-bold text-base sm:text-lg">NOK</span>
+            <div className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-full w-24 h-24 sm:w-28 sm:h-28 shadow-xl flex items-center justify-center p-3">
+              <Image
+                src="/logos/nok recommerce logo copy.png"
+                alt="nok"
+                width={80}
+                height={30}
+                className="w-full h-full object-contain"
+              />
             </div>
 
             {/* Orbiting data particles */}
