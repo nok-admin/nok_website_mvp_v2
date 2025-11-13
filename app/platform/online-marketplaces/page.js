@@ -10,7 +10,7 @@ export default function OnlineMarketplaces() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white pt-32 pb-24">
+      <section className="relative overflow-hidden bg-white pt-32 pb-0">
         <div className="absolute inset-0 background-gradient opacity-30"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,7 +36,7 @@ export default function OnlineMarketplaces() {
       </section>
 
       {/* Marketplace Network Visual */}
-      <section className="w-full py-16 lg:py-24 bg-white">
+      <section className="w-full py-16 lg:py-24">
         <div className="w-full h-[600px] lg:h-[700px]">
           <MarketplaceNetwork />
         </div>

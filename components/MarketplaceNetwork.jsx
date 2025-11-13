@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { ShoppingCart, TrendingUp, Globe, CheckCircle } from 'lucide-react'
 
 export default function MarketplaceNetwork() {
@@ -9,24 +10,20 @@ export default function MarketplaceNetwork() {
 
   const marketplaces = [
     { 
-      initial: 'A', 
       name: 'Amazon Renewed',
-      color: 'from-orange-400 to-orange-600',
+      logo: '/logos/Amazon.svg',
     },
     { 
-      initial: 'E', 
       name: 'eBay Refurbished',
-      color: 'from-blue-400 to-blue-600',
+      logo: '/logos/ebay.png',
     },
     { 
-      initial: 'W', 
       name: 'Walmart Restored',
-      color: 'from-cyan-400 to-cyan-600',
+      logo: '/logos/Walmart.svg',
     },
     { 
-      initial: 'B', 
       name: 'Best Buy Outlet',
-      color: 'from-yellow-400 to-yellow-600',
+      logo: '/logos/Best_Buy.webp',
     }
   ]
 
@@ -46,7 +43,7 @@ export default function MarketplaceNetwork() {
   }, [marketplaces.length])
 
   return (
-    <div className="relative w-full h-full bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center p-4 sm:p-8 overflow-hidden">
+    <div className="relative w-full h-full bg-white flex items-center justify-center p-4 sm:p-8 overflow-hidden">
       {/* Background grid pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -225,7 +222,7 @@ export default function MarketplaceNetwork() {
           </div>
         </div>
 
-        <div className="absolute bottom-[45%] left-[50%] transform -translate-x-1/2 animate-bounce z-30" style={{ animationDuration: '3s', animationDelay: '2s' }}>
+        <div className="absolute top-[60%] left-[50%] transform -translate-x-1/2 animate-bounce z-30" style={{ animationDuration: '3s', animationDelay: '2s' }}>
           <div className="bg-blue-500 text-white rounded-lg px-3 py-1.5 sm:px-4 sm:py-2 shadow-lg flex items-center gap-1.5 sm:gap-2">
             <Globe className="w-4 h-4 sm:w-5 sm:h-5" />
             <span className="text-xs sm:text-sm font-semibold whitespace-nowrap">Automated</span>
@@ -271,12 +268,16 @@ function MarketplaceCard({ marketplace, isActive }) {
         <div className="absolute inset-0 rounded-xl bg-blue-400 opacity-20 blur-xl -z-10" />
       )}
 
-      {/* Icon */}
+      {/* Logo */}
       <div className="flex justify-center mb-2 sm:mb-3">
-        <div
-          className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center text-white font-bold text-xl sm:text-2xl bg-gradient-to-br ${marketplace.color} shadow-md`}
-        >
-          {marketplace.initial}
+        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center bg-white border border-gray-200 shadow-md p-2">
+          <Image
+            src={marketplace.logo}
+            alt={marketplace.name}
+            width={64}
+            height={64}
+            className="w-full h-full object-contain"
+          />
         </div>
       </div>
 
