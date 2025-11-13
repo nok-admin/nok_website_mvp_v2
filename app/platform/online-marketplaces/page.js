@@ -39,7 +39,7 @@ export default function OnlineMarketplaces() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
               Reach Millions Through Certified Marketplaces.
-            </h1>
+          </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light">
               Nok automates marketplace listings and compliance for every resale channel.
             </p>

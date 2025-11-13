@@ -169,15 +169,15 @@ export default function About() {
                     <span className="text-4xl font-bold text-gray-500">X</span>
                   </div>
                 ) : (
-                  <Image 
+                <Image 
                     src="/team/Xavi Headshot.jpg"
-                    alt="Xavi Facon"
-                    fill
-                    className="object-cover"
-                    sizes="128px"
-                    quality={95}
+                  alt="Xavi Facon"
+                  fill
+                  className="object-cover"
+                  sizes="128px"
+                  quality={95}
                     onError={() => setXaviImageError(true)}
-                  />
+                />
                 )}
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-1">Xavi Facon</h3>

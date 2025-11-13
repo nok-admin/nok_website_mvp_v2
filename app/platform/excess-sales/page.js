@@ -18,7 +18,7 @@ export default function ExcessSales() {
             <div>
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
                 Turn Excess Into Opportunity.
-              </h1>
+          </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light">
                 Nok helps brands recover value from surplus and open-box inventory through trusted resale networks.
               </p>
