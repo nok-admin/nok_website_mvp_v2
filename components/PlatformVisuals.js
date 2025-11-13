@@ -52,10 +52,10 @@ export function FlowDiagram({ title, steps, className = '' }) {
           </h2>
         )}
         <div className="bg-white rounded-3xl p-12 border border-gray-200 shadow-lg">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative">
+          <div className="flex flex-col md:flex-row items-center justify-center relative">
             {steps.map((step, idx) => (
-              <div key={idx} className="flex-1 flex flex-col items-center relative">
-                <div className="w-24 h-24 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl flex items-center justify-center mb-4 shadow-md border border-cyan-200">
+              <div key={idx} className="flex flex-col items-center relative z-10 flex-1">
+                <div className="w-24 h-24 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl flex items-center justify-center mb-4 shadow-md border border-cyan-200 relative z-10">
                   {step.icon}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
@@ -63,12 +63,12 @@ export function FlowDiagram({ title, steps, className = '' }) {
                   <p className="text-sm text-gray-600 text-center">{step.description}</p>
                 )}
                 {idx < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-12 left-full w-full h-0.5">
-                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-full">
-                      <div className="h-0.5 bg-gradient-to-r from-cyan-300 to-blue-300"></div>
+                  <div className="hidden md:block absolute top-12 left-1/2 w-full h-0.5 z-0" style={{ left: 'calc(50% + 48px)', width: 'calc(100% - 96px)' }}>
+                    <div className="relative w-full h-full">
+                      <div className="absolute inset-0 h-0.5 bg-gradient-to-r from-cyan-300 via-blue-300 to-cyan-300"></div>
                       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2">
-                        <svg className="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
+                        <svg className="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                         </svg>
                       </div>
                     </div>
@@ -144,22 +144,6 @@ export function BrandedResaleVisual() {
 
   return (
     <>
-      <ThreeCardGrid
-        title="Branded Resale Storefronts"
-        columns={4}
-        cards={brandExamples.map(brand => ({
-          title: brand.title,
-          description: brand.description,
-          className: `bg-gradient-to-br ${brand.gradient} border-2 ${brand.border}`,
-          image: (
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gray-200 rounded-lg mx-auto mb-2"></div>
-              <div className="text-xs font-semibold text-gray-600">{brand.title}</div>
-            </div>
-          )
-        }))}
-        className="bg-gray-50"
-      />
       <FlowDiagram
         title="Nok Resale Infrastructure"
         steps={infrastructureSteps}
