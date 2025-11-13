@@ -2,6 +2,7 @@
 
 import { useDemoModal } from '@/components/ClientLayout'
 import { ExcessSalesVisual } from '@/components/PlatformVisuals'
+import InventoryTransform from '@/components/InventoryTransform'
 
 export default function ExcessSales() {
   const { openDemoModal } = useDemoModal()
@@ -33,21 +34,9 @@ export default function ExcessSales() {
               </button>
             </div>
 
-            {/* Right: Warehouse/Inventory Visual */}
+            {/* Right: Inventory Transform Visual */}
             <div className="relative">
-              <div className="bg-white rounded-3xl p-8 border-2 border-orange-200 shadow-2xl">
-                {/* Warehouse Grid */}
-                <div className="grid grid-cols-4 gap-3 mb-6">
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                    <div key={i} className="aspect-square bg-gradient-to-br from-orange-100 to-amber-100 rounded-lg border border-orange-200"></div>
-                  ))}
-                </div>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="flex-1 h-1 bg-gradient-to-r from-orange-300 to-amber-300 rounded"></div>
-                  <div className="text-sm font-semibold text-gray-700">Excess Inventory</div>
-                  <div className="flex-1 h-1 bg-gradient-to-r from-amber-300 to-orange-300 rounded"></div>
-                </div>
-              </div>
+              <InventoryTransform />
             </div>
           </div>
         </div>
