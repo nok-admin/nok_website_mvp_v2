@@ -2,44 +2,23 @@
 
 import { useDemoModal } from '@/components/ClientLayout'
 import { OnlineMarketplacesVisual } from '@/components/PlatformVisuals'
+import MarketplaceNetwork from '@/components/MarketplaceNetwork'
 
 export default function OnlineMarketplaces() {
   const { openDemoModal } = useDemoModal()
 
-  const marketplaceLogos = [
-    { name: 'Amazon Renewed', initial: 'A' },
-    { name: 'eBay Refurbished', initial: 'E' },
-    { name: 'Walmart Restored', initial: 'W' },
-    { name: 'Best Buy Outlet', initial: 'B' },
-  ]
-
   return (
     <>
-      {/* Hero Section - Marketplace Logos Collage */}
+      {/* Hero Section */}
       <section className="relative overflow-hidden bg-white pt-32 pb-24">
         <div className="absolute inset-0 background-gradient opacity-30"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Marketplace Logos Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {marketplaceLogos.map((mkt, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-cyan-300 transition-all hover:shadow-lg text-center"
-              >
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-cyan-600">{mkt.initial}</span>
-                </div>
-                <div className="text-sm font-semibold text-gray-900">{mkt.name}</div>
-              </div>
-            ))}
-          </div>
-
           {/* Hero Content */}
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto mb-16">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
               Reach Millions Through Certified Marketplaces.
-          </h1>
+            </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light">
               Nok automates marketplace listings and compliance for every resale channel.
             </p>
@@ -53,6 +32,13 @@ export default function OnlineMarketplaces() {
               </svg>
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* Marketplace Network Visual */}
+      <section className="w-full py-16 lg:py-24 bg-white">
+        <div className="w-full h-[600px] lg:h-[700px]">
+          <MarketplaceNetwork />
         </div>
       </section>
 
