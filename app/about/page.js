@@ -190,9 +190,14 @@ export default function About() {
             {/* Team Member 6 - Griffin Parrill */}
             <div className="group text-center">
               <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100 border border-gray-200 relative group-hover:border-gray-400 transition-all">
-                <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-gray-500">G</span>
-                </div>
+                <Image 
+                  src="/team/Griffin Parrill.jpg"
+                  alt="Griffin Parrill"
+                  fill
+                  className="object-cover"
+                  sizes="128px"
+                  quality={95}
+                />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-1">Griffin Parrill</h3>
               <p className="text-gray-600 font-medium mb-2 text-sm">Operations Lead</p>
