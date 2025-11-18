@@ -14,6 +14,27 @@ export default function ExcessSales() {
         <div className="absolute inset-0 background-gradient opacity-20"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 rounded-3xl bg-white/80 backdrop-blur border border-orange-100 shadow-xl p-6 sm:p-8">
+            <p className="text-sm font-semibold text-orange-600 uppercase tracking-widest mb-2">Unified partner</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Excess &amp; Returns Require ONE Unified Partner</h2>
+            <p className="text-base sm:text-lg text-gray-700 mb-4">
+              Fragmented vendor networks create friction that erodes value long before items hit secondary markets. We eliminate the gaps that create:
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-3 text-gray-700 text-base">
+              {[
+                'Brand narrative inconsistency',
+                'Recovery inefficiency across channels',
+                'Data silos between partners',
+                'Lost optimization opportunities'
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Content */}
             <div>
@@ -70,6 +91,57 @@ export default function ExcessSales() {
             <div className="lg:sticky lg:top-24">
               <ExcessSalesVisual />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Secondary Markets Section */}
+      <section className="bg-gray-50 px-4 py-20">
+        <div className="max-w-5xl mx-auto space-y-6 text-center">
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest">Secondary Markets Matter</p>
+          <h2 className="text-4xl font-bold text-gray-900">Secondary Markets Deserve Primary Focus</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Excess management is not an afterthought—it is a direct reflection of your brand. Treating secondary channels with the same rigor as primary sales preserves equity, boosts recovery, and extends customer experience beyond the initial transaction.
+          </p>
+          <ul className="grid md:grid-cols-2 gap-6 text-left">
+            {[
+              'Secondary channels require the same strategic attention as your DTC or retail programs.',
+              'Excess management directly impacts how customers perceive your quality standards.',
+              'Recovery rates climb when liquidation, donation, and resale share one operating model.',
+              'Customer journeys extend beyond the first purchase—secondary touchpoints must deliver.'
+            ].map((item) => (
+              <li key={item} className="p-6 rounded-2xl bg-white border border-gray-200 shadow-sm text-gray-700 leading-relaxed">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Strategic Opportunities */}
+      <section className="bg-white px-4 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-2">Strategic Opportunities</p>
+            <h2 className="text-4xl font-bold text-gray-900">Turn Excess Into Strategic Advantage</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Reference your excess one-pager inside <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span> to unlock use cases that go far beyond basic liquidation.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { title: 'New Customer Acquisition', body: 'Lower CAC by introducing customers to your brand in trusted off-price environments with full storytelling control.' },
+              { title: 'Market Testing', body: 'Pilot new geographies or retailers with reclaimed goods before risking full-price distribution.' },
+              { title: 'Channel Expansion', body: 'Spin up new distribution relationships using unified workflows without disrupting primary partners.' },
+              { title: 'Segment Access', body: 'Reach price-conscious segments who ultimately convert into full-price, high-LTV customers.' },
+              { title: 'Brand Building', body: 'Extend reach on your terms—consistent packaging, messaging, and service even in secondary channels.' },
+              { title: 'Operational Intelligence', body: 'Feed disposition and sell-through data back into planning to improve forecasting and procurement.' }
+            ].map((item) => (
+              <div key={item.title} className="p-6 rounded-2xl border border-gray-200 shadow-sm bg-gray-50">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{item.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

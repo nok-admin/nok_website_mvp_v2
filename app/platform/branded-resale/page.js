@@ -18,7 +18,7 @@ export default function BrandedResale() {
             {/* Left: Content */}
             <div>
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
-                Resale That Looks Like Your Brand.
+                Resale That Looks and Feels Like Your Brand
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light">
                 Nok powers fully branded resale experiences for leading consumer brands.
@@ -59,22 +59,26 @@ export default function BrandedResale() {
         <div className="max-w-4xl mx-auto space-y-16">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Control Your Brand Narrative</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Branded resale programs allow you to maintain complete control over how your products are presented and sold in secondary markets. Unlike generic marketplace listings, branded resale channels preserve your brand identity, pricing strategy, and customer experience.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              With <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span>, you can create dedicated resale storefronts that reflect your brand standards, ensuring customers receive the same quality experience whether they're buying new or refurbished products.
-            </p>
+            <ul className="space-y-3 text-lg text-gray-700 leading-relaxed list-disc list-inside">
+              <li>
+                Branded resale programs allow you to maintain complete control over how your products are presented and sold in secondary markets, preserving your identity, pricing strategy, and customer experience.
+              </li>
+              <li>
+                With <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span>, you can create dedicated resale storefronts that reflect your brand standards, ensuring customers receive the same quality experience whether they're buying new or refurbished products.
+              </li>
+            </ul>
           </div>
 
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Maximize Recovery Value</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Branded resale channels typically achieve higher recovery rates than generic marketplaces because they maintain brand trust and perceived value. Customers are willing to pay premium prices for refurbished products when they're sold through official brand channels.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Our platform enables intelligent pricing strategies that optimize for both recovery value and brand protection, ensuring you maximize revenue without compromising your brand positioning.
-            </p>
+            <ul className="space-y-3 text-lg text-gray-700 leading-relaxed list-disc list-inside">
+              <li>
+                Branded resale channels typically achieve higher recovery rates than generic marketplaces because they maintain brand trust and perceived value, so customers willingly pay premium prices through official brand channels.
+              </li>
+              <li>
+                Our platform enables intelligent pricing strategies that optimize for both recovery value and brand protection, ensuring you maximize revenue without compromising your brand positioning.
+              </li>
+            </ul>
           </div>
         </div>
       </section>

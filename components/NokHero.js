@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 export default function NokHero({ onRequestDemo }) {
   return (
-    <section className="relative overflow-hidden bg-white pb-4 px-4 sm:pb-6" style={{ marginTop: '-64px', paddingTop: '192px' }}>
+    <section className="relative overflow-hidden bg-white pb-12 px-4 sm:pb-16" style={{ marginTop: '-64px', paddingTop: '192px' }}>
       {/* Background gradient */}
       <div className="absolute z-0" style={{ top: 0, left: 0, right: 0, bottom: 0 }}>
         <div className="background-gradient" style={{ width: '100%', height: '100%' }}></div>
@@ -25,14 +25,14 @@ export default function NokHero({ onRequestDemo }) {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl pb-4">
           {/* Main headline with rotating words */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 mb-8 leading-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gray-900 mb-8 leading-[1.12] sm:leading-[1.1]">
             The platform that turns returns into <RotatingWords words={['revenue', 'cost savings', 'retailer accountability', 'insights']} />
           </h1>
 
           {/* Subheading - no typing effect, line break after "their" */}
-          <p className="text-xl sm:text-2xl text-gray-600 mb-10">
+          <p className="text-xl sm:text-2xl text-gray-600 mb-10 leading-relaxed">
             <span className="font-black lowercase tracking-tight" style={{ fontWeight: 900 }}>nok</span>'s platform is built for brands to take control of their <br className="hidden sm:block" />
             reverse supply chain.
           </p>
