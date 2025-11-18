@@ -85,71 +85,94 @@ export function FlowDiagram({ title, steps, className = '' }) {
 
 // Branded Resale Visual Components
 export function BrandedResaleVisual() {
-  const brandExamples = [
-    {
-      title: 'Ember Renewed',
-      description: 'Fully branded storefront with native design, pricing control, and customer trust.',
-      gradient: 'from-orange-50 to-amber-50',
-      border: 'border-orange-200'
-    },
-    {
-      title: 'Bissell Refurbished',
-      description: 'Seamless integration maintaining brand identity across all customer touchpoints.',
-      gradient: 'from-blue-50 to-cyan-50',
-      border: 'border-blue-200'
-    },
-    {
-      title: 'Hatch Restored',
-      description: 'Premium resale experience that matches new product quality and presentation.',
-      gradient: 'from-purple-50 to-pink-50',
-      border: 'border-purple-200'
-    },
-    {
-      title: 'NZXT Certified',
-      description: 'Specialized gaming hardware resale with warranty-grade refurbishment standards.',
-      gradient: 'from-indigo-50 to-blue-50',
-      border: 'border-indigo-200'
-    }
-  ]
-
-  const infrastructureSteps = [
-    {
-      icon: (
-        <svg className="w-12 h-12 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-        </svg>
-      ),
-      title: 'Brand',
-      description: 'Your brand identity'
-    },
-    {
-      icon: (
-        <svg className="w-12 h-12 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-      ),
-      title: 'Nok RMS',
-      description: 'Resale management system'
-    },
-    {
-      icon: (
-        <svg className="w-12 h-12 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
-      ),
-      title: 'Customer',
-      description: 'Branded experience'
-    }
-  ]
-
   return (
-    <>
-      <FlowDiagram
-        title="Nok Resale Infrastructure"
-        steps={infrastructureSteps}
-        className="bg-white"
-      />
-    </>
+    <section className="py-20 px-4 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg">
+          <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+            {/* Background */}
+            <rect width="1200" height="600" fill="#FFFFFF"/>
+
+            {/* Title */}
+            <text x="600" y="50" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="32" fontWeight="600" fill="#0F172A" textAnchor="middle">Nok Resale Infrastructure</text>
+
+            {/* Model 1: Brand Hosted, Nok-Managed */}
+            <g>
+              {/* Container */}
+              <rect x="60" y="100" width="500" height="440" rx="16" fill="#FAFAFA" stroke="#E2E8F0" strokeWidth="1.5"/>
+
+              {/* Header */}
+              <text x="310" y="145" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="20" fontWeight="600" fill="#0F172A" textAnchor="middle">Brand Hosted, Nok-Managed</text>
+              <line x1="90" y1="160" x2="530" y2="160" stroke="#E2E8F0" strokeWidth="1"/>
+
+              {/* Brand Layer */}
+              <rect x="90" y="190" width="440" height="100" rx="12" fill="#FFFFFF" stroke="#94A3B8" strokeWidth="1.5"/>
+              <text x="310" y="218" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="16" fontWeight="600" fill="#0F172A" textAnchor="middle">Your Brand Infrastructure</text>
+              <text x="310" y="245" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="14" fill="#64748B" textAnchor="middle">Brand-owned domain &amp; hosting</text>
+              <text x="310" y="268" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="14" fill="#64748B" textAnchor="middle">Complete design &amp; UX control</text>
+
+              {/* Arrow */}
+              <path d="M 310 300 L 310 325" stroke="#CBD5E1" strokeWidth="2" fill="none" markerEnd="url(#arrow-simple)"/>
+
+              {/* Nok Layer */}
+              <rect x="90" y="335" width="440" height="100" rx="12" fill="#FFFFFF" stroke="#94A3B8" strokeWidth="1.5"/>
+              <text x="310" y="363" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="16" fontWeight="600" fill="#0F172A" textAnchor="middle">Nok RMS</text>
+              <text x="310" y="390" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="14" fill="#64748B" textAnchor="middle">Resale management system</text>
+              <text x="310" y="413" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="14" fill="#64748B" textAnchor="middle">Operations &amp; fulfillment</text>
+
+              {/* Arrow */}
+              <path d="M 310 445 L 310 470" stroke="#CBD5E1" strokeWidth="2" fill="none" markerEnd="url(#arrow-simple)"/>
+
+              {/* Customer Layer */}
+              <rect x="90" y="480" width="440" height="45" rx="12" fill="#0F172A" stroke="#0F172A" strokeWidth="1.5"/>
+              <text x="310" y="510" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="15" fontWeight="500" fill="#FFFFFF" textAnchor="middle">Branded customer experience</text>
+            </g>
+
+            {/* Model 2: Nok Hosted & Managed */}
+            <g>
+              {/* Container */}
+              <rect x="640" y="100" width="500" height="440" rx="16" fill="#FAFAFA" stroke="#E2E8F0" strokeWidth="1.5"/>
+
+              {/* Header */}
+              <text x="890" y="145" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="20" fontWeight="600" fill="#0F172A" textAnchor="middle">Nok Hosted &amp; Managed</text>
+              <line x1="670" y1="160" x2="1110" y2="160" stroke="#E2E8F0" strokeWidth="1"/>
+
+              {/* Nok Platform Layer */}
+              <rect x="670" y="190" width="440" height="100" rx="12" fill="#FFFFFF" stroke="#94A3B8" strokeWidth="1.5"/>
+              <text x="890" y="218" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="16" fontWeight="600" fill="#0F172A" textAnchor="middle">Nok Platform &amp; Hosting</text>
+              <text x="890" y="245" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="14" fill="#64748B" textAnchor="middle">Nok-managed infrastructure</text>
+              <text x="890" y="268" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="14" fill="#64748B" textAnchor="middle">Rapid deployment</text>
+
+              {/* Arrow */}
+              <path d="M 890 300 L 890 325" stroke="#CBD5E1" strokeWidth="2" fill="none" markerEnd="url(#arrow-simple)"/>
+
+              {/* Nok RMS Layer */}
+              <rect x="670" y="335" width="440" height="100" rx="12" fill="#FFFFFF" stroke="#94A3B8" strokeWidth="1.5"/>
+              <text x="890" y="363" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="16" fontWeight="600" fill="#0F172A" textAnchor="middle">Nok RMS</text>
+              <text x="890" y="390" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="14" fill="#64748B" textAnchor="middle">Resale management system</text>
+              <text x="890" y="413" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="14" fill="#64748B" textAnchor="middle">Operations &amp; fulfillment</text>
+
+              {/* Arrow */}
+              <path d="M 890 445 L 890 470" stroke="#CBD5E1" strokeWidth="2" fill="none" markerEnd="url(#arrow-simple)"/>
+
+              {/* Customer Layer */}
+              <rect x="670" y="480" width="440" height="45" rx="12" fill="#0F172A" stroke="#0F172A" strokeWidth="1.5"/>
+              <text x="890" y="510" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="15" fontWeight="500" fill="#FFFFFF" textAnchor="middle">Branded customer experience</text>
+            </g>
+
+            {/* Bottom note */}
+            <text x="600" y="575" fontFamily="Inter, system-ui, -apple-system, sans-serif" fontSize="13" fill="#94A3B8" textAnchor="middle">Both models align to your brand identity, sales strategy, and customer ecosystem standards</text>
+
+            {/* Arrow marker */}
+            <defs>
+              <marker id="arrow-simple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#CBD5E1" />
+              </marker>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -325,37 +348,6 @@ export function ExcessSalesVisual() {
         </div>
       </div>
 
-      {/* Trusted Resale Network */}
-      <div>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-left">
-          Trusted Resale Network
-        </h2>
-        <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
-          <div className="space-y-8">
-            {/* Domestic Buyers */}
-            <div className="text-center">
-              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl flex items-center justify-center border-2 border-cyan-200 shadow-md mb-4">
-                <svg className="w-12 h-12 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Domestic</h3>
-              <p className="text-sm text-gray-600">North American buyers across all regions</p>
-            </div>
-
-            {/* International Buyers */}
-            <div className="text-center">
-              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center border-2 border-blue-200 shadow-md mb-4">
-                <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">International</h3>
-              <p className="text-sm text-gray-600">Global buyers across multiple continents</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }

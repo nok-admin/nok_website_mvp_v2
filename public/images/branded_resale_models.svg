@@ -1,0 +1,81 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="600" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <text x="600" y="50" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#0F172A" text-anchor="middle">Nok Resale Infrastructure</text>
+  
+  <!-- Model 1: Brand Hosted, Nok-Managed -->
+  <g>
+    <!-- Container -->
+    <rect x="60" y="100" width="500" height="440" rx="16" fill="#FAFAFA" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <text x="310" y="145" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#0F172A" text-anchor="middle">Brand Hosted, Nok-Managed</text>
+    <line x1="90" y1="160" x2="530" y2="160" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <!-- Brand Layer -->
+    <rect x="90" y="190" width="440" height="100" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="310" y="218" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Your Brand Infrastructure</text>
+    <text x="310" y="245" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Brand-owned domain & hosting</text>
+    <text x="310" y="268" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Complete design & UX control</text>
+    
+    <!-- Arrow -->
+    <path d="M 310 300 L 310 325" stroke="#CBD5E1" stroke-width="2" fill="none" marker-end="url(#arrow-simple)"/>
+    
+    <!-- Nok Layer -->
+    <rect x="90" y="335" width="440" height="100" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="310" y="363" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Nok RMS</text>
+    <text x="310" y="390" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Resale management system</text>
+    <text x="310" y="413" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Operations & fulfillment</text>
+    
+    <!-- Arrow -->
+    <path d="M 310 445 L 310 470" stroke="#CBD5E1" stroke-width="2" fill="none" marker-end="url(#arrow-simple)"/>
+    
+    <!-- Customer Layer -->
+    <rect x="90" y="480" width="440" height="45" rx="12" fill="#0F172A" stroke="#0F172A" stroke-width="1.5"/>
+    <text x="310" y="510" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#FFFFFF" text-anchor="middle">Branded customer experience</text>
+  </g>
+  
+  <!-- Model 2: Nok Hosted & Managed -->
+  <g>
+    <!-- Container -->
+    <rect x="640" y="100" width="500" height="440" rx="16" fill="#FAFAFA" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <text x="890" y="145" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#0F172A" text-anchor="middle">Nok Hosted & Managed</text>
+    <line x1="670" y1="160" x2="1110" y2="160" stroke="#E2E8F0" stroke-width="1"/>
+    
+    <!-- Nok Platform Layer -->
+    <rect x="670" y="190" width="440" height="100" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="890" y="218" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Nok Platform & Hosting</text>
+    <text x="890" y="245" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Nok-managed infrastructure</text>
+    <text x="890" y="268" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Rapid deployment</text>
+    
+    <!-- Arrow -->
+    <path d="M 890 300 L 890 325" stroke="#CBD5E1" stroke-width="2" fill="none" marker-end="url(#arrow-simple)"/>
+    
+    <!-- Nok RMS Layer -->
+    <rect x="670" y="335" width="440" height="100" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="890" y="363" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">Nok RMS</text>
+    <text x="890" y="390" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Resale management system</text>
+    <text x="890" y="413" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Operations & fulfillment</text>
+    
+    <!-- Arrow -->
+    <path d="M 890 445 L 890 470" stroke="#CBD5E1" stroke-width="2" fill="none" marker-end="url(#arrow-simple)"/>
+    
+    <!-- Customer Layer -->
+    <rect x="670" y="480" width="440" height="45" rx="12" fill="#0F172A" stroke="#0F172A" stroke-width="1.5"/>
+    <text x="890" y="510" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="15" font-weight="500" fill="#FFFFFF" text-anchor="middle">Branded customer experience</text>
+  </g>
+  
+  <!-- Bottom note -->
+  <text x="600" y="575" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#94A3B8" text-anchor="middle">Both models align to your brand identity, sales strategy, and customer ecosystem standards</text>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow-simple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#CBD5E1" />
+    </marker>
+  </defs>
+</svg>
